@@ -21,6 +21,19 @@ public class Movie implements Comparable<Movie>{
 		
 	}
 	
+	/**
+	 * The method will determine if the total rating is higher or lower than 
+	 * the next rating for the next movie. 
+	 */
+	public int compareTo(Movie compare){
+		if(this.totalRating < compare.getTotalRating()){
+			return -1;
+		}
+		if(this.totalRating > compare.getTotalRating()){
+			return 1;
+		}
+		return 0;
+	}
 	public int compareTo(Movie compare){
 		if(this.totalRating < compare.getTotalRating()){
 			return 1;
